@@ -32,17 +32,7 @@ public class DataGenerator {
         String lastName = faker.name().lastName();
         String firstName = faker.name().firstName();
         String fullName = lastName + " " + firstName;
-
-        String[] parts = fullName.split(" ");
-        StringBuilder result = new StringBuilder();
-        for (String part : parts) {
-            if (!part.isEmpty()) {
-                result.append(part.substring(0, 1).toUpperCase())
-                        .append(part.substring(1).toLowerCase())
-                        .append(" ");
-            }
-        }
-        return result.toString().trim();
+        return lastName + " " + firstName;
     }
 
     public static String generatePhone(Faker faker) {
